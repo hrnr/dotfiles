@@ -1,0 +1,42 @@
+[
+	// layout switching
+	{
+		"keys": ["alt+shift+j"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1]]
+		}
+	},
+	{
+		"keys": ["alt+shift+k"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 0.5, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+		}
+	},
+	{
+		"keys": ["alt+shift+l"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 0.33, 0.66, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1]]
+		}
+	},
+	// clang format for OpenCL
+	{ "keys": ["ctrl+option+a"], "command": "clang_format",
+        "context":
+        [
+            {"key": "selector", "operator": "equal", "operand": "source.OpenCL"}
+        ]
+    },
+    { "keys": ["ctrl+shift+w"], "command": "close" },
+    { "keys": ["ctrl+w"], "command": "delete_word", "args": { "forward": false } },
+]
