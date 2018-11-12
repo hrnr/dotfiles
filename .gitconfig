@@ -1,0 +1,32 @@
+[user]
+	name = Jiri Horner
+	email = laeqten@gmail.com
+[push]
+	default = matching
+[core]
+	pager = less -+$LESS -R
+[color]
+	ui = auto
+	diff = auto
+[color "diff"]
+	whitespace = red reverse
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	diffs = diff --staged
+	ff = merge --ff-only
+[transfer]
+	fsckobjects = true
+[fetch]
+	fsckobjects = true
+[receive]
+	fsckObjects = true
+# Always use ssh for github, even if the remote URL uses https or git
+[url "git@github.com:"]
+	insteadOf = git://github.com/
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[pager]
+	branch = false

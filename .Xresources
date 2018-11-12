@@ -1,0 +1,73 @@
+! xterm settings
+
+xterm*utf8: 1
+xterm*cursorBlink: true
+xterm*metaSendsEscape: true
+xterm*saveLines: 8192
+xterm*VT100.translations: #override Meta <Btn1Up>: exec-formatted("google-chrome '%t'", PRIMARY)
+xterm*VT100.alternateScroll: true
+
+## colors
+xterm*termName: xterm-256color
+xterm*background: #272822
+xterm*foreground: #F8F8F2
+xterm*highlightColor: #49483E
+xterm*cursorColor: #F8F8F0
+xterm*color0:     rgb:00/00/00
+xterm*color1:     #cccc00000000
+xterm*color2:     #4e4e9a9a0606
+xterm*color3:     #c4c4a0a00000
+xterm*color4:     rgb:7a/7a/b0
+xterm*color5:     rgb:96/3c/59
+xterm*color6:     rgb:41/81/79
+xterm*color7:     #d3d3d7d7cfcf
+xterm*color8:     rgb:66/66/66
+xterm*color9:     #efef29292929
+xterm*color10:    #8a8ae2e23434
+xterm*color11:    #fcfce9e94f4f
+xterm*color12:    rgb:41/86/be
+xterm*color13:    rgb:ef/9e/be
+xterm*color14:    rgb:71/be/be
+xterm*color15:    #eeeeeeeeecec
+
+## fonts
+xterm*faceName: Monospace:size=11:antialias=true
+xterm*faceSize1: 7
+## xterm*font: 7x13
+
+## hacking
+xterm*VT100.Translations: #override \
+    Shift <Key>Up:              scroll-back(1) \n\
+    Shift <Key>Down:            scroll-forw(1) \n\
+    ~Meta Shift Ctrl <Key>V:    insert-selection(CLIPBOARD) \n\
+     Meta Shift Ctrl <Key>V:    insert-selection(PRIMARY) \n\
+    ~Meta Shift Ctrl <Key>C:    copy-selection(CLIPBOARD) \n\
+    ~Shift <Btn1Up>:            select-end(PRIMARY, CUT_BUFFER0) \n\
+     Shift <Btn1Up>:            select-end(CLIPBOARD, CUT_BUFFER1) \n\
+    ~Shift ~Ctrl ~Meta <Btn2Up>:insert-selection(PRIMARY, CUT_BUFFER0) \n\
+     Shift ~Ctrl ~Meta <Btn2Up>:insert-selection(CLIPBOARD, CUT_BUFFER1) \n\
+     Shift ~Ctrl <KeyPress> KP_Add:insert() \n\
+     Shift Ctrl <KeyPress> KP_Add:insert() \n\
+     Shift <KeyPress> KP_Subtract:insert() \n\
+     Alt <Key>Return:insert()
+! {{{ Quick Reference
+!
+! Scrolling:
+!   Scroll Wheel
+!   Shift-PgUp/PgDn
+!
+! Copy/Paste:
+!   Mouse-Select        : Copy to PRIMARY
+!   Shift + Mouse-Select: Copy to CLIPBOARD
+!
+!   Middle-Click        : Paste from PRIMARY
+!   Shift + Middle-Click: Paste from CLIPBOARD
+!
+!   Ctrl+Shift+V        : Paste from CLIPBOARD
+!   Ctrl+Alt+Shift+V    : Paste from PRIMARY
+!
+! }}}
+
+! default cursor
+Xcursor*theme: DMZ-White
+Xft.dpi: 102
